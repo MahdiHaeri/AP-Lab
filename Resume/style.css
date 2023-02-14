@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url("./background.jpg");
+    /* background-image: linear-gradient(to right, tomato, lightgreen); */
+    /* background-color: white; */
+    height: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.main_container {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* background-color: black; */
+}
+
+.container {
+    width: 30%;
+    height: auto;
+    max-width: 1300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: tomato; */
+    border-radius: 10px;
+}
+
+.section {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex;
+    align-items: center;
+    /* background-color: white; */
+    background-image: url("./white_background.jpg");
+}
+
+.image_container {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: 5px black solid;
+    box-shadow: 0 0 10px 0px black;
+}
+
+.image_container:hover{
+    /* border: 5px black solid; */
+    transition: 1s;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    border-radius: 100%;
+    background-color: #cccccc;
+}
+
+.left_container {
+    /* box-shadow: 0 0 10px  0px black; */
+    /* margin: 2px; */
+}
+
+.profile_info {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons_link {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;;  
+}
+
+i {
+    margin: 5px;
+    padding: 5px;
+    /* transition: .2s; */
+    color: black;
+}
+
+i:hover {
+    color: tomato;
+}
+
+.skill_container {
+    width: 70%;
+    height: 100%;
+    /* margin: 2px; */
+    /* background-color: tomato; */
+    padding: 5px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* box-shadow: 0 0 10px 0px black; */
+}
+
+.skill_box {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.skill_box:hover {
+    /* background-color: lightgreen; */
+    transition: 1s;
+    /* cursor: pointer; */
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      /* transform: scale(0); */
+      width: 0%;
+    }
+    100% {
+      transform: 100%;
+    }
+}
+
+.skill_bar {
+    /* width: 50%; */
+    padding: 10px;
+    margin: 2px;
+    background-color: lightgreen;
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+.html {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.css {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.javascript {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.python {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.java {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bash {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.git {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info_container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.interested_container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
