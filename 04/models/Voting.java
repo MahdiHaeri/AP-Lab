@@ -1,4 +1,4 @@
-package models; 
+package models;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -32,7 +32,14 @@ public class Voting {
     }
 
     public void createChoice(String choice) {
-        HashSet<Vote> value = new HashSet<Vote>();
-        choices.put(choice, value);
+        HashSet<Vote> votes = new HashSet<Vote>();
+        choices.put(choice, votes);
+    }
+
+    public void vote(Person voter, ArrayList<String> voterChoices) {
+        for (String choice: voterChoices) {
+            Vote vote = new Vote(voter, "1401/1/1");
+            choices.get(choice).add(vote);
+        }
     }
 }
