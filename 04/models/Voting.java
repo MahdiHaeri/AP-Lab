@@ -42,4 +42,20 @@ public class Voting {
             choices.get(choice).add(vote);
         }
     }
+
+    public void printResult() {
+        for (String choice: choices.keySet()) {
+            System.out.println(choice + ": " + choices.get(choice).size());
+        }
+    }
+
+    public void printVoters() {
+        if (!isAnonymous) {
+            for (String choice: choices.keySet()) {
+                System.out.println(choice + ": " + choices.get(choice));
+            }
+        } else {
+            System.out.println("This voting is Anonimouse!");
+        }
+    }
 }
