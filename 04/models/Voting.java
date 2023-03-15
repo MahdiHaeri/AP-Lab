@@ -37,6 +37,11 @@ public class Voting {
     }
 
     public void vote(Person voter, ArrayList<String> voterChoices) {
+        if (type == 1 && voterChoices.size() > 1) {
+            System.out.println("You can just have one choice");
+            return;
+        }
+
         for (String choice: voterChoices) {
             Vote vote = new Vote(voter, "1401/1/1");
             choices.get(choice).add(vote);
