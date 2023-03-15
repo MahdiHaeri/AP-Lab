@@ -46,6 +46,8 @@ public class Voting {
             Vote vote = new Vote(voter, "1401/1/1");
             choices.get(choice).add(vote);
         }
+
+        voters.add(voter);
     }
 
     public void printResult() {
