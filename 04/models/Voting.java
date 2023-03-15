@@ -31,4 +31,8 @@ public class Voting {
         return resultArray;
     }
 
+    public void createChoice(String choice) {
+        HashSet<Vote> value = new HashSet<Vote>();
+        choices.put(choice, value);
+    }
 }
