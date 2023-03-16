@@ -28,12 +28,12 @@ public class VotingSystem {
    }
 
    public void printResult(int index) {
-      if (0 < index || index >= votingList.size()) {
+      if (0 > index || index >= votingList.size()) {
          System.out.println("There is no such index in voting list.");
          return;
       }
 
-      System.out.println("Voting " + index);
+      System.out.println("Voting (" + index + ")");
       votingList.get(index).printResult();
    }
 
