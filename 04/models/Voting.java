@@ -15,6 +15,8 @@ public class Voting {
         this.type = type;
         this.question = question; 
         this.isAnonymous = isAnonymous;
+        this.choices = new HashMap<String, HashSet<Vote>>();
+        this.voters = new ArrayList<Person>();
     }
 
     public String getQuestion() { return question; }
@@ -52,7 +54,7 @@ public class Voting {
 
     public void printResult() {
         for (String choice: choices.keySet()) {
-            System.out.println(choice + ": " + choices.get(choice).size());
+            System.out.println("=> " + choice + ": " + choices.get(choice).size());
         }
     }
 

@@ -6,7 +6,7 @@ public class VotingSystem {
    private ArrayList<Voting> votingList;
 
    public VotingSystem() {
-
+      votingList = new ArrayList<Voting>();
    }
 
    public Voting getVoting(int index) {
@@ -28,17 +28,17 @@ public class VotingSystem {
    }
 
    public void printResult(int index) {
-      if (index <= 0 || index >= votingList.size()) {
+      if (0 > index || index >= votingList.size()) {
          System.out.println("There is no such index in voting list.");
          return;
       }
 
-      System.out.println("Voting " + index);
+      System.out.println("Voting (" + index + ")");
       votingList.get(index).printResult();
    }
 
    public void printVoters(int index) {
-      if (index <= 0 || index >= votingList.size()) {
+      if (0 < index || index >= votingList.size()) {
          System.out.println("There is no such index in voting list.");
          return;
       }
@@ -48,7 +48,7 @@ public class VotingSystem {
    }
 
    public void printVoting(int index) {
-      if (index <= 0 || index >= votingList.size()) {
+      if (0 < index || index >= votingList.size()) {
          System.out.println("There is no such index in voting list.");
          return;
       }
