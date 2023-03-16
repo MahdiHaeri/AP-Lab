@@ -53,10 +53,8 @@ public class Voting {
     }
 
     public void printResult() {
-        int i = 1;
         for (String choice: choices.keySet()) {
-            System.out.println(i + ") " + choice + ": " + choices.get(choice).size());
-            i++;
+            System.out.println("=> " + choice + ": " + choices.get(choice).size());
         }
     }
 
