@@ -11,4 +11,17 @@ public class Vote {
 
     public Person getVoter() { return voter; }
     public String getDate() { return date; }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if(!(o instanceof VotingSystem)) return false;
+        VotingSystem that = (VotingSystem) o;
+        return Object.equals(getVotingList(), that.getVotingList());
+    }
+
+    @Override
+    public int hashCode() {
+        return Object.hash(getVotingList());
+    }
 }
