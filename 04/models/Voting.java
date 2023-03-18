@@ -3,6 +3,7 @@ package models;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Voting {
     private int type;
@@ -45,11 +46,19 @@ public class Voting {
         }
 
         for (String choice: voterChoices) {
-            Vote vote = new Vote(voter, "1401/1/1");
-            choices.get(choice).add(vote);
+            Vote newVote = new Vote(voter, "1401/1/1");
+            choices.get(choice).add(newVote);
         }
 
         voters.add(voter);
+    }
+
+    public void vote(Person person) {
+        Random random = new Random();
+        int randomChoiceIndex = random.nextInt(0, choices.size());
+        ArrayList<String> choices = getChoices();        
+        Vote newVote = new Vote(person, "1401/1/1");
+        this.choices.get(choices.get(randomChoiceIndex)).add(newVote);
     }
 
     public void printResult() {
