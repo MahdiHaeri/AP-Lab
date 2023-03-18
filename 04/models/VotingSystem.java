@@ -1,6 +1,7 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class VotingSystem {
    private ArrayList<Voting> votingList;
@@ -63,6 +64,20 @@ public class VotingSystem {
    }
 
    public void vote(int index, Person voter, ArrayList<String> choices) {
+      if (0 < index || index >= votingList.size()) {
+         System.out.println("There is no such index in voting list.");
+         return;
+      }
+
       votingList.get(index).vote(voter, choices);
+   }
+
+   public void vote(int index, Person person) {
+      if (0 < index || index >= votingList.size()) {
+         System.out.println("There is no such index in voting list.");
+         return;
+      }
+
+      votingList.get(index).vote(person);
    }
 }
