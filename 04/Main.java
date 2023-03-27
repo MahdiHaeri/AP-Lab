@@ -4,32 +4,58 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         VotingSystem votingSystem = new VotingSystem();
+        ArrayList<String> choices = new ArrayList<String>();
+        ArrayList<String> choices2 = new ArrayList<String>();
+
+        Person person1 = new Person("Mahdi", "Haeri");
+        Person person2 = new Person("Ali", "Rezaei");
+        Person person3 = new Person("Mohammad", "Hosseini");
+        Person person4 = new Person("Sara", "Hosseini");
+        Person person5 = new Person("Sara", "Hosseini");
+
+        choices.add("choice1");
+        choices.add("choice2");
+        choices.add("choice3");
+
+        choices2.add("choice1");
+
+        votingSystem.createVoting("question1", false , 0, choices);
+        votingSystem.createVoting("question2", false, 0, choices);
+        votingSystem.createVoting("question3", true, 1, choices);
+
+        votingSystem.getVoting(0).vote(person1, choices);
+        votingSystem.getVoting(0).vote(person2, choices);
+        votingSystem.getVoting(1).vote(person3, choices);
+        votingSystem.getVoting(1).vote(person4, choices);
+        votingSystem.getVoting(0).vote(person5, choices);
+
+        votingSystem.getVoting(0).vote(person1, choices2);
+        votingSystem.getVoting(2).vote(person1, choices2);
         
-        ArrayList<String> choices_1 = new ArrayList<String>();
+        votingSystem.printVoting(0);
+        System.out.println();
+        votingSystem.printVoting(1);
+        System.out.println();
+        votingSystem.printVoting(2);
 
-        choices_1.add("Yes");
-        choices_1.add("No");
-        choices_1.add("I don't know");
-
-        votingSystem.createVoting("Are you attend in class for friday?", false, 2, choices_1);
-        votingSystem.createVoting("Are you a boy?", false, 2, choices_1);
+        System.out.println();
+        System.out.println();
+        System.out.println();
         
-        Person person_1 = new Person("mahdi", "haeri");
-        Person person_2 = new Person("ali", "jafari");
-        Person person_3 = new Person("mobin", "baghi");
-        Person person_4 = new Person("fatemeh", "yousofi");
-        Person person_5 = new Person("raha", "mohammadi");
-
-        ArrayList<String> choices_2 = new ArrayList<String>();
-        choices_2.add(choices_1.get(0));
-        choices_2.add(choices_1.get(2));
-
-        votingSystem.vote(0, person_1, choices_2);
-        votingSystem.vote(1, person_2, choices_1);
-
         votingSystem.printResult(0);
-        System.out.println("------------------------------------------");
+        System.out.println();
         votingSystem.printResult(1);
-        System.out.println("------------------------------------------");
+        System.out.println();
+        votingSystem.printResult(2);
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+        votingSystem.printVoters(0);
+        System.out.println();
+        votingSystem.printVoters(1);
+        System.out.println();
+        votingSystem.printVoters(2);
     }
 }

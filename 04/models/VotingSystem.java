@@ -39,7 +39,7 @@ public class VotingSystem {
    }
 
    public void printVoters(int index) {
-      if (0 < index || index >= votingList.size()) {
+      if (0 > index || index >= votingList.size()) {
          System.out.println("There is no such index in voting list.");
          return;
       }
@@ -49,7 +49,7 @@ public class VotingSystem {
    }
 
    public void printVoting(int index) {
-      if (0 < index || index >= votingList.size()) {
+      if (0 > index || index >= votingList.size()) {
          System.out.println("There is no such index in voting list.");
          return;
       }
