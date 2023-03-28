@@ -23,14 +23,15 @@ public class Main {
         votingSystem.createVoting("question2", false, 0, choices);
         votingSystem.createVoting("question3", true, 1, choices);
 
-        votingSystem.getVoting(0).vote(person1, choices);
         votingSystem.getVoting(0).vote(person2, choices);
         votingSystem.getVoting(1).vote(person3, choices);
         votingSystem.getVoting(1).vote(person4, choices);
         votingSystem.getVoting(0).vote(person5, choices);
 
         votingSystem.getVoting(0).vote(person1, choices2);
+        votingSystem.getVoting(1).vote(person2, choices2);
         votingSystem.getVoting(2).vote(person1, choices2);
+        votingSystem.getVoting(2).vote(person2, choices); // this voting is from type 1, so can't choice more than one choice 
         
         votingSystem.printVoting(0);
         System.out.println();
@@ -56,6 +57,6 @@ public class Main {
         System.out.println();
         votingSystem.printVoters(1);
         System.out.println();
-        votingSystem.printVoters(2);
+        votingSystem.printVoters(2); // this voting is anonymous, so can't print voters
     }
 }
