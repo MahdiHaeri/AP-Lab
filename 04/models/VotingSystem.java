@@ -1,7 +1,6 @@
 package models;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class VotingSystem {
    private ArrayList<Voting> votingList;

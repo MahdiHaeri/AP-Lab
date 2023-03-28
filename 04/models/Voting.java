@@ -76,4 +76,23 @@ public class Voting {
             System.out.println("This voting is Anonimouse!");
         }
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+
+        if (obj == this) {
+            return true;
+        }
+
+        if (!(obj instanceof Voting)) {
+            return false;
+        }
+
+        Voting other = (Voting) obj;
+
+        return this.question.equals(other.question);
+    }
 }
