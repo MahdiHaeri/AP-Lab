@@ -20,6 +20,8 @@ public class Main {
             animal.show();
         }
 
+	System.out.println();
+
         eagle.hunt(parrot);
         cheetah.hunt(girafe);
     }
