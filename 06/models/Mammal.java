@@ -1,7 +1,7 @@
 package models;
 
 public abstract class Mammal extends Animal {
-    double speed;
+    protected double speed;
 
     public Mammal(String name, int age, String attributes, double speed) {
         super(name, age, attributes);
@@ -16,6 +16,10 @@ public abstract class Mammal extends Animal {
         if (speed > 0) {
             this.speed = speed;
         }
+    }
+
+    public void show() {
+        System.out.println("name: " + name + ", age: " + age + ", speed: " + speed + " \"" + attributes + "\""); 
     }
 
     public String toString() {

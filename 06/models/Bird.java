@@ -1,7 +1,7 @@
 package models;
 
 public abstract class Bird extends Animal {
-    double heightOfFlight;
+    protected double heightOfFlight;
 
     public Bird(String name, int age, String attributes, double heightOfFlight) {
         super(name, age, attributes);
@@ -16,6 +16,10 @@ public abstract class Bird extends Animal {
         if (heightOfFlight > 0) {
             this.heightOfFlight = heightOfFlight;
         }
+    }
+
+    public void show() {
+        System.out.println("name: " + name + ", age: " + age + ", height of fly: " + heightOfFlight + " \"" + attributes + "\"");
     }
 
     public String toString() {
