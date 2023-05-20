@@ -1,6 +1,6 @@
 package models;
 
-public class Girafe extends Mammal {
+public class Girafe extends Mammal implements Prey {
     public Girafe (String name, int age, String attributes, double speed) {
         super(name, age, attributes, speed);
     }
