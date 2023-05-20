@@ -1,0 +1,43 @@
+package models;
+
+public class Animal {
+    private String name;
+    private int age;
+    private String attributes;
+
+    public Animal (String name, int age, String attributes) {
+        this.name = name;
+        this.age = age;
+        this.attributes = attributes;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+    
+    public int getAge() {
+        return this.age;
+    }
+
+    public String getAttributes() {
+        return this.attributes;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        if (age > 0) {
+            this.age = age;
+        }
+    }
+
+    public void setAttributes(String attributes) {
+        this.attributes = attributes;
+    }
+
+    public String toString() {
+        return "Name: " + this.name + "\nAge: " + this.age + "\nAttributes: " + this.attributes;
+    }
+}
