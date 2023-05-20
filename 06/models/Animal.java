@@ -37,6 +37,10 @@ public abstract class Animal {
         this.attributes = attributes;
     }
 
+    public void show() {
+        System.out.println("name: " + name + ", age: " + age + " \"" + attributes + "\"");
+    }
+
     public String toString() {
         return "Name: " + this.name + "\nAge: " + this.age + "\nAttributes: " + this.attributes;
     }
