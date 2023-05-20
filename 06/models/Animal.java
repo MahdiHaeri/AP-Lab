@@ -1,9 +1,9 @@
 package models;
 
 public abstract class Animal {
-    private String name;
-    private int age;
-    private String attributes;
+    protected String name;
+    protected int age;
+    protected String attributes;
 
     public Animal (String name, int age, String attributes) {
         this.name = name;
