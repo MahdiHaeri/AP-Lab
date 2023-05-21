@@ -54,6 +54,17 @@ public class DataAccess {
         }
     }
 
+    public Note getNoteByName(String name) {
+        ArrayList<Note> notes = readAllNotes();
+        for (Note note: notes) {
+            if (note.getName().equals(name)) {
+                return note;
+            }
+        } 
+        
+        return null;
+    }
+
     public void exportNote(int index) {
         Note note = getNoteByIndex(index);
         System.out.println(note.toString());

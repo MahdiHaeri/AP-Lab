@@ -65,6 +65,9 @@ public class View {
     public void addNote() {
         print("Please choose a title for the note: ");
         String name = scanner.nextLine();
+        if (controller.isExsist(name)) {
+            throw new RuntimeException("this title early exsist");
+        }
 
         print("Enter text:");
         String text = scanner.nextLine();

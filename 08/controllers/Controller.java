@@ -18,6 +18,10 @@ public class Controller {
         dataAccess.saveNote(note);
     }
 
+    public boolean isExsist(String name) {
+        return (dataAccess.getNoteByName(name) != null) ? true : false;
+    }
+
     public void removeNoteByIndex(int index) {
         dataAccess.removeNoteByIndex(index);
     }
