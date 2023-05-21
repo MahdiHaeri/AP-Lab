@@ -2,6 +2,8 @@ package views;
 
 import java.sql.Date;
 import java.util.Scanner;
+import java.util.zip.CheckedInputStream;
+
 import controllers.*;
 import java.util.ArrayList;
 
@@ -76,8 +78,9 @@ public class View {
             throw new RuntimeException("this title early exsist");
         }
 
-        print("Enter text:");
+        print("Enter text: (type 0 for exit)");
         String text = scanner.nextLine();
+        checkExit(text);
 
         Date date = new Date(System.currentTimeMillis());
         controller.addNote(name, text, date);
