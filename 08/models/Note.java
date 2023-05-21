@@ -1,32 +1,29 @@
 package models;
 
-public class Note {
+import java.io.Serializable;
+import java.util.Date;
+
+public class Note implements Serializable {
     private String name;
     private String text;
-    private int day, month, year;    
+    private Date date; 
 
-    public Note(String name, String text, int day, int month, int year) {
+    public Note(String name, String text, Date date) {
         this.name = name;
         this.text = text;
-        this.day = day;
-        this.month = month;
-        this.year = year;
+        this.date = date;
     }
 
     public String getName() { return name; }
     public String getText() { return text; }
-    public int getDay() { return day; }
-    public int getMonth() { return month; }
-    public int getYear() { return year; }
+    public Date getDate() { return date; }
 
     public void setName(String name) { this.name = name; }
     public void setText(String text) { this.text = text; }
-    public void setDay(int day) { this.day = day; }
-    public void setMonth(int month) { this.month = month; }
-    public void setYear(int year) { this.year = year; }
+    public void setDate(Date date) { this.date = date; }
 
     @Override
     public String toString() {
-        return "Note{" + "name=" + name + ", text=" + text + ", day=" + day + ", month=" + month + ", year=" + year + '}';
+        return "Name: " + name + "\nText: " + text + "\nDate: " + date;
     }
 }
