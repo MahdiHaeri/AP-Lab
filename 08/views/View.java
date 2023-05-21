@@ -62,9 +62,16 @@ public class View {
             }
     }
 
+    public void checkExit(String string) {
+        if (string.equals("0")) {
+            throw new RuntimeException("");
+        }
+    }
+
     public void addNote() {
-        print("Please choose a title for the note: ");
+        print("Please choose a title for the note: (type 0 for exit)");
         String name = scanner.nextLine();
+        checkExit(name);
         if (controller.isExsist(name)) {
             throw new RuntimeException("this title early exsist");
         }
@@ -77,32 +84,38 @@ public class View {
     }
 
     public void printNotes() {
-        printNotesName();
+        System.out.println("Choose a note to show: (type 0 for exit)");
+        printNotePreview();
         int index = scanner.nextInt();
+        checkExit(Integer.toString(index));
         System.out.println();
         System.out.println(controller.getNoteString(index - 1));
     }
 
     public void removeNote() {
-        printNotesName();
+        System.out.println("Choose a note to remove: (type 0 for exit)");
+        printNotePreview();
         int index = scanner.nextInt();
+        checkExit(Integer.toString(index));
         System.out.println();
         controller.removeNoteByIndex(index - 1);
     }
 
-    public void printNotesName() {
-        ArrayList<String> notesName = controller.getNotesName();
+    public void printNotePreview() {
+        ArrayList<String> notesPreviews = controller.getNotesPreview();
         int i = 1;
-        for (String name : notesName) {
-            print(i + ") " + name);
+        for (String notepreview : notesPreviews) {
+            print(i + ") " + notepreview);
             i++;
         }
     }
 
 
     public void exportNote() {
-        printNotesName();
+        System.out.println("Choose a note to remove: (type 0 for exit)");
+        printNotePreview();
         int index = scanner.nextInt();
+        checkExit(Integer.toString(index));
         controller.exportNote(index - 1);
     }
 }

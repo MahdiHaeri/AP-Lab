@@ -24,6 +24,6 @@ public class Note implements Serializable {
 
     @Override
     public String toString() {
-        return "Name: " + name + "\nText: " + text + "\nDate: " + date;
+        return "\t<< " + name + " >>\t" + "\n------------------------------\n" + text + "\n------------------------------" + "\nDate: " + date + "\n";
     }
 }

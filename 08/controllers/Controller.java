@@ -26,11 +26,11 @@ public class Controller {
         dataAccess.removeNoteByIndex(index);
     }
 
-    public ArrayList<String> getNotesName() {
+    public ArrayList<String> getNotesPreview() {
         ArrayList<String> notesName = new ArrayList<>();
     
         for (Note note: dataAccess.readAllNotes()) {
-            notesName.add(note.getName());
+            notesName.add(note.getName() + "\t" + note.getDate().toString());
         }
 
         return notesName;
