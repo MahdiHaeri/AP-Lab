@@ -48,10 +48,9 @@ public class DataAccess {
 
         if (index >= 0 && index < notes.size()) {
             return notes.get(index);
-        } else {
-            System.out.println("Note not found.");
-            return null;
-        }
+        } 
+
+        return null;
     }
 
     public Note getNoteByName(String name) {
