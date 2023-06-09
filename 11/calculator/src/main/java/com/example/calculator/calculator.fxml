@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="body" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label prefHeight="140.0" prefWidth="631.0" styleClass="text-plane" GridPane.columnSpan="4">
+         <GridPane.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </GridPane.margin>
+      </Label>
+      <Button mnemonicParsing="false" prefHeight="88.0" prefWidth="200.0" styleClass="key" text="AC" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="133.0" prefWidth="326.0" styleClass="key" text="+/-" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="197.0" prefWidth="261.0" styleClass="key" text="\%" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="144.0" prefWidth="252.0" styleClass="key" stylesheets="@style.css" text="7" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </GridPane.margin>
+      </Button>
+      <Button id="key" mnemonicParsing="false" prefHeight="140.0" prefWidth="234.0" styleClass="key" stylesheets="@style.css" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="98.0" prefWidth="201.0" styleClass="key" stylesheets="@style.css" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="284.0" styleClass="key" stylesheets="@style.css" text="4" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="168.0" prefWidth="295.0" styleClass="key" stylesheets="@style.css" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="116.0" prefWidth="238.0" styleClass="key" stylesheets="@style.css" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="170.0" prefWidth="380.0" styleClass="key" text="1" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="105.0" prefWidth="233.0" styleClass="key" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="119.0" prefWidth="189.0" styleClass="key" text="3" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="115.0" prefWidth="379.0" styleClass="key" text="0" GridPane.columnSpan="2" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="124.0" prefWidth="271.0" styleClass="key" text="." GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="163.0" prefWidth="254.0" styleClass="key" text="=" GridPane.columnIndex="3" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="318.0" styleClass="key" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="115.0" prefWidth="227.0" styleClass="key" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="243.0" styleClass="key" text="*" GridPane.columnIndex="3" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="118.0" prefWidth="197.0" styleClass="key" text="/" GridPane.columnIndex="3" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </GridPane.margin>
+      </Button>
+   </children>
+</GridPane>
