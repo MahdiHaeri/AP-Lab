@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.util.ArrayList;
 
 public class MessageDAO {
-    ArrayList<Message> messages;
+    private ArrayList<Message> messages;
 
     public MessageDAO() {
         messages = new ArrayList<Message>();

@@ -8,7 +8,6 @@ public class UserController {
 
     public UserController() {
         userDAO = new UserDAO();
-
     }
 
     public void addUser(String username) {

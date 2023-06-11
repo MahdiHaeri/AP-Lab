@@ -2,13 +2,13 @@ package org.example.server.models;
 
 import java.util.Date;
 public class Message {
-    String id;
-    String text;
-    Date date;
+    private String id;
+    private String text;
+    private Date date;
 
-    public Message(String text, Date date) {
+    public Message(String text) {
         this.text = text;
-        this.date = date;
+        this.date = new Date();
     }
 
     public String getText() {
