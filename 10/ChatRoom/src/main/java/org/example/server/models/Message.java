@@ -1,13 +1,16 @@
 package org.example.server.models;
 
+import java.io.Serializable;
 import java.util.Date;
-public class Message {
+public class Message implements Serializable {
     private String id;
+    private User user;
     private String text;
     private Date date;
 
-    public Message(String text) {
+    public Message(String text, User user) {
         this.text = text;
+        this.user = user;
         this.date = new Date();
     }
 
@@ -17,6 +20,14 @@ public class Message {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Date getDate() {
@@ -39,6 +50,7 @@ public class Message {
     public String toString() {
         return "Message{" +
                 "id='" + id + '\'' +
+                ", user=" + user +
                 ", text='" + text + '\'' +
                 ", date=" + date +
                 '}';

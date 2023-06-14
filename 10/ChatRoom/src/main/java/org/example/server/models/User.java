@@ -1,6 +1,8 @@
 package org.example.server.models;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     private String username;
 
     public User(String username) {
