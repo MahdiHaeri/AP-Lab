@@ -14,6 +14,8 @@ public class Client {
     private static ObjectOutputStream objectOutputStream;
     private static ObjectInputStream objectInputStream;
 
+    private static User user;
+
     private static final int port = 6000;
 
     public static void main(String args[]) {
@@ -27,12 +29,12 @@ public class Client {
             System.out.println("Connected to server");
             System.out.println("Welcom to the chatroom :) ");
             System.out.println("Please enter your User name: ");
-            User user = new User(scanner.nextLine());
+            user = new User(scanner.nextLine());
             sendMessage(new Message(user.getUsername() + " joined to chatroom", user));
-            Thread thread = new Thread(new ClientReader());
-            Thread thread1 = new Thread(new ClientWriter(user));
-            thread.start();
-            thread1.start();
+            Thread readThread = new Thread(new ClientReader());
+            Thread writeThread = new Thread(new ClientWriter(user));
+            readThread.start();
+            writeThread.start();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -30,6 +30,11 @@ public class ClientHandler implements Runnable {
     }
     @Override
     public void run() {
+        Message loginMessage = readMessage();
+        System.out.println("Message received from " + loginMessage.getUser().getUsername() + ": " + loginMessage.getText());
+        this.user = loginMessage.getUser();
+        Server.addClient(this);
+        Server.broadcastMessage(loginMessage);
         while (true) {
             Message message = readMessage();
             System.out.println("Message received from " + message.getUser().getUsername() + ": " + message.getText());
