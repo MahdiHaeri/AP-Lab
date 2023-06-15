@@ -25,7 +25,6 @@ public class Server {
                 Socket socket = serverSocket.accept();
                 System.out.println("Client connected");
                 ClientHandler clientHandler = new ClientHandler(socket, admin);
-                clients.add(clientHandler);
                 excutorService.execute(clientHandler);
             }
         } catch (IOException e) {
@@ -39,5 +38,9 @@ public class Server {
                 client.sendMessage(message);
             }
         }
+    }
+
+    public static synchronized void addClient(ClientHandler clientHandler) {
+        clients.add(clientHandler);
     }
 }
