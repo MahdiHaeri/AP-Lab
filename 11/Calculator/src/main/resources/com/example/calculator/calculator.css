@@ -1,6 +1,6 @@
-/*.root {*/
-/*    -fx-background-color: #333;*/
-/*}*/
+.root {
+    -fx-background-color: #333;
+}
 
 .key {
     -fx-border-radius: 0px;
@@ -33,9 +33,10 @@
     -fx-background-color: #aaa;
 }
 
-.label-display {
+.text-field-display {
     -fx-text-fill: #fff;
     -fx-background-color: #333;
     -fx-font-size: 18px;
     -fx-font-weight: bold;
+    -fx-background-radius: 0px;
 }
