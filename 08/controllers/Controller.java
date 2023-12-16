@@ -10,7 +10,7 @@ public class Controller {
     private DataAccess dataAccess;
 
     public Controller() {
-        dataAccess = new DataAccess("/Users/mahdi/Desktop/AP-Lab/08/Data/notes.bin");
+        dataAccess = new DataAccess("Data/notes.bin");
     }
 
     public void addNote(String name, String text, Date date) {
